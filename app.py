@@ -112,4 +112,5 @@ def get_unique_values():
         return jsonify({'error': str(e)}), 400
 
 if __name__ == '__main__':
-    app.run(debug=False,host='0.0.0.0',port=8080)
+    port = int(os.environ.get('PORT', 5000))  # Render assigns a PORT dynamically
+    app.run(debug=False,host='0.0.0.0',port=port)
