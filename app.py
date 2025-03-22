@@ -11,7 +11,7 @@ from catboost import CatBoostRegressor
 import warnings
 warnings.filterwarnings("ignore")
 pd.pandas.set_option("display.max_columns", None)
-df = pd.read_csv("C:/Users/HarryJoseph/Desktop/h/invstment/cvProjects/MLreact/backend/cardekho_dataset.csv")
+df = pd.read_csv("cardekho_dataset.csv")
 df.drop(['brand','model', 'Unnamed: 0'], axis=1, inplace=True)
 def detect_outliers(col):
     # Finding the IQR
